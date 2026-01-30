@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Combatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UroS</title>
+  <link id="dynamic-style" rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>UroS</h1>
+  <div id="gameContainer">
+    <div id="leftPanel">
+
+    </div>
+    <div id="canvasContainer">
+      <canvas id="game"></canvas>
+    </div>
+    <div id="rightPanel">
+      INFO:<br>
+      Use your stat points to build your champion!
+      LEVEL UP->More points, health & damage.
+      <hr>
+      ARMOR:<br>
+      Decreases damage taken from your opponent.
+      Especially damage from arrows.
+      Gives you a chance for block.
+      <hr>
+      AGILITY:<br>
+      Increases range attack damage.
+      Gives you a chance for critical hit.
+      Gives you a chance for dodge.
+      <hr>
+      SPECIAL:
+      Play the game and find out :]
+      <hr>
+      BTW, you have more lives than cats!
+      Use em wisely ;>
+    </div>
+  </div>
+  <div class="nimmari">
+    <label id="goodluck">Player name:</label>
+    <input type="text" class="namebox" id="namebox">
+    <button type="button" class="namebutton" id="namebutton">xoxo</button>
+  </div>
+  <div class="napit">
+    <button type="button" class="naps" id="info">INFO</button>
+    <label>StatPoints:</label>
+    <input type="text" id="AP" class="statpoints" disabled>
+    <label id="currentXP"></label>
+    <img src="images/player.png" width="20px" height="20px">x
+    <label id="lives"></label>
+    <button type="button" class="naps" id="startBtn">Start</button>
+    <button type="button" class="naps" id="turn">Enemy Turn</button>
+    <button type="button" class="naps" id="melee">Melee</button>
+    <button type="button" class="naps" id="range">Range</button>
+    <label id="whosturn"></label>
+  </div>
+  <div class="stats-container">
+    <div class="player-stats">
+      <label>Player</label>
+      <input type="text" id="plrName" class="inputs" disabled>
+      <label>Level</label>
+      <input type="text" id="plrLevelInput" class="leveli" disabled>
+      <label>Health</label>
+      <input type="number" id="health"  disabled>
+      <button class="adjust-stat" data-stat="basehp" data-direction="up">+</button>
+      <button class="adjust-stat" data-stat="basehp" data-direction="down">-</button>
+      <label>Armor</label>
+      <input type="number" id="armor"  disabled>
+      <button class="adjust-stat" data-stat="basearmor" data-direction="up">+</button>
+      <button class="adjust-stat" data-stat="basearmor" data-direction="down">-</button>
+      <label>Agility</label>
+      <input type="number" id="agility"  disabled>
+      <button class="adjust-stat" data-stat="baseagi" data-direction="up">+</button>
+      <button class="adjust-stat" data-stat="baseagi" data-direction="down">-</button>
+      <label>Damage</label>
+      <input type="number" id="damage"  disabled>
+      <button class="adjust-stat" data-stat="basedmg" data-direction="up">+</button>
+      <button class="adjust-stat" data-stat="basedmg" data-direction="down">-</button>
+      </div>
+    <section id="logArea" class="log-container">
+      <h5>Battle Log</h5>
+      <div id="consoleOutput" class="console-output"></div>
+    </section>
+    <div class="cpu-stats">
+      <label>Enemy</label>
+      <input type="text" id="cpuName" class="inputs" disabled>
+      <label>Level</label>
+      <input type="text" id="cpuLevelInput" class="leveli" disabled>
+      <label>Health</label>
+      <input type="text" class="inputs" id="enemyHP" disabled>
+      <label>Armor</label>
+      <input type="text" class="inputs" id="enemyArmor" disabled>
+      <label>Agility</label>
+      <input type="text" class="inputs" id="enemyAgi" disabled>
+      <label>Damage</label>
+      <input type="text" class="inputs" id="enemyDmg" disabled>
+
+    </div>
+  </div>
+
+  <script src="index.js" type="module"></script>
+</body>
+</html>
